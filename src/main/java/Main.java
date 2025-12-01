@@ -29,7 +29,9 @@
                             System.out.println("Wpisz wiek:");
                             int age = sk.nextInt();
                             sk.nextLine();
-                            s.addStudent(new Student(name, age));
+                            System.out.println("Wpisz datę urodzenia");
+                            String data = sk.nextLine();
+                            s.addStudent(new Student(name, age,data));
                             break;
                         case 2:
                         var students = s.getStudents(); 
