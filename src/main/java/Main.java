@@ -31,7 +31,13 @@
                             int age = sk.nextInt();
                             sk.nextLine();
                             System.out.println("Wpisz datę urodzenia");
-                            String data = sk.nextLine();
+                             System.out.println("Wpisz dzień");
+                            String datad = sk.nextLine();
+                            System.out.println("Wpisz miesiąc");
+                            String datam = sk.nextLine();
+                            System.out.println("Wpisz rok");
+                            String datar = sk.nextLine();
+                            String data = datar +"-"+datam+"-"+datad;
                             s.addStudent(new Student(name, age,data));
                             break;
                         case 2:
