@@ -1,13 +1,14 @@
     import java.io.IOException;
     import java.util.Scanner;
+    import java.util.Collection;
 
     class Main {
         public static void main(String[] args) {
             try {
                 Service s = new Service();
-                s.addStudent(new Student("Krzysztof", 20));
-                s.addStudent(new Student("Janusz", 40));
-                s.addStudent(new Student("Dawid", 54));
+                s.addStudent(new Student("Krzysztof", 20, "23.02.2003"));
+                s.addStudent(new Student("Janusz", 40, "23.02.2003"));
+                s.addStudent(new Student("Dawid", 54, "23.02.2003"));
 
                 Scanner sk = new Scanner(System.in);
                 int wybor = -1;
@@ -34,7 +35,7 @@
                             s.addStudent(new Student(name, age,data));
                             break;
                         case 2:
-                        var students = s.getStudents(); 
+                        Collection<Student> students = s.getStudents(); 
                         for (Student current : students) { 
                             System.out.println(current.toString()); 
                         } 
